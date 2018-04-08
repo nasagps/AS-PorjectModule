@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AS-ProjectModule</title>
+    <link rel="stylesheet" href="Vendors/Mui/mui.min.css">
+    <link rel="stylesheet" href="Vendors/animate.css">
+    <link rel="stylesheet" href="Css/common.css">
+    <script src="vendors/Mui/mui.js"></script>
+    <script src="vendors/Angular/angular.min.js"></script>
+    <script src="Vendors/Angular/angular-ui-router.min.js"></script>
+    <script src="Vendors/sea.js"></script>
+    <script src="Vendors/seaConfig.js"></script>
+    <script src="Javascript/app.js"></script>
+    <script>
+        var viewWidth = document.documentElement.clientWidth,
+            viewHeight = document.documentElement.clientHeight;
+        if (viewWidth < 750) {
+            document.documentElement.style.fontSize = viewWidth / 750 * 100 + "px";
+        } else {
+            document.documentElement.style.fontSize = 414 / 750 * 100 + "px";
+            if (confirm('根据您的设备屏幕宽度，建议您切换至PC版网页。是否进行切换？')) {
+                console.log('切换至PC版。');
+            }
+        }
+        document.documentElement.style.height = viewHeight + "px";
+    </script>
+</head>
+
+<body ng-app="moduleApp">
+    <!--正式项目中，将“module”替换为项目名称 -->
+    <div id="css"></div>
+    <ui-view></ui-view>
+</body>
+
+</html>
